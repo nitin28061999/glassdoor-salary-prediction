@@ -46,11 +46,8 @@ streamlit run app.py
 ```
 Add your key to `.env` (`GEMINI_API_KEY=...`) or `.streamlit/secrets.toml`.
 
-## Deploy on Streamlit Community Cloud
-1. Push the repo to GitHub (make sure `models/model.pkl` is committed).
-2. share.streamlit.io → **New app** → pick the repo, branch, `app.py`.
-3. **Advanced settings**: choose the same Python version you trained with, and paste `GEMINI_API_KEY = "..."` under Secrets.
-4. Deploy.
+## Deployed on Streamlit Community Cloud(https://glassdoor-salary-prediction-kzl85tuybgeymze77qgfee.streamlit.app/)
+
 
 If the app errors on model load, the cause is almost always a scikit-learn version mismatch: retrain in the same environment as `requirements.txt` and commit the new `model.pkl`. The committed model was trained with scikit-learn 1.8.0; if you retrain on another version, update the pin in `requirements.txt`.
 
